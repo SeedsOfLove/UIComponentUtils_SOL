@@ -1,0 +1,3 @@
+include ':UIComponentUtilsLib'
+include ':app'
+rootProject.name = "UIComponentUtils_SOL"

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.uicomponentutilslib.custom_widget.UCULEditAndBtnView
+        android:id="@+id/eabv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="请输入数据"
+        app:text_size="15sp"
+        app:text_color="@color/colorPrimary"
+        app:edit_bg="@drawable/ucul_round_corner_bg_orange"
+        app:btn_icon="@mipmap/search"/>
+
+    <com.example.uicomponentutilslib.custom_widget.UCULTextAndTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="标题"
+        app:title_text_size="15sp"
+        app:title_text_color="@color/colorPrimary"
+        app:title_text_width="200"
+        app:division_bg="@color/colorPrimary"
+        app:division_visibility="visible"
+        app:content_text="内容内容内容内容内容fsdfsd内容内容"
+        app:content_text_size="15sp"
+        app:content_text_color="@color/colorPrimary" />
+
+</LinearLayout>

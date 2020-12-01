@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ucu_colorFont_black">#FF373737</color>
+    <color name="ucu_colorFont_gray">#A9A9A9</color>
+
+    <color name="ucu_white">#FFFFFF</color>
+    <color name="ucu_gray">#CFCFCF</color>
+    <color name="ucu_orange">#FFA54F</color>
+
+</resources>
