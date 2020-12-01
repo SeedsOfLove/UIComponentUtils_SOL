@@ -6,6 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="编辑框配按钮控件"/>
+
     <com.example.uicomponentutilslib.custom_widget.UCULEditAndBtnView
         android:id="@+id/eabv"
         android:layout_width="match_parent"
@@ -15,6 +22,13 @@
         app:text_color="@color/colorPrimary"
         app:edit_bg="@drawable/ucul_round_corner_bg_orange"
         app:btn_icon="@mipmap/search"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="文本框配文本框控件"/>
 
     <com.example.uicomponentutilslib.custom_widget.UCULTextAndTextView
         android:layout_width="match_parent"
