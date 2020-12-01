@@ -8,7 +8,6 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,6 +24,8 @@ public class UCULTextAndTextView extends LinearLayout
     private TextView txt_title;         //标题
     private TextView txt_division;      //分割线
     private TextView txt_content;       //内容
+
+    private onContentTextClick mClick;
 
     public UCULTextAndTextView(Context context)
     {
@@ -46,6 +47,15 @@ public class UCULTextAndTextView extends LinearLayout
 
         initView();
         initStyle(context, attrs);
+
+        txt_content.setOnClickListener(new OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                mClick.contentTextClick();
+            }
+        });
     }
 
     /**
@@ -65,17 +75,17 @@ public class UCULTextAndTextView extends LinearLayout
     {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ucul_text_and_text_view);
 
-        String titleText = array.getString(R.styleable.ucul_text_and_text_view_title_text);                                                                     //标题文本
-        float titleTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_text_view_title_text_size, 15);                                             //标题文本大小
-        int titleTextColor = array.getColor(R.styleable.ucul_text_and_text_view_title_text_color,  getResources().getColor(R.color.ucu_colorFont_black));       //标题文本颜色
-        Drawable titleTextBg = array.getDrawable(R.styleable.ucul_text_and_text_view_title_text_bg);                                                            //标题文本背景
-        int titleTextWidth = array.getInteger(R.styleable.ucul_text_and_text_view_title_text_width, 300);                                                       //标题文本宽度
-        int divisionBgColor = array.getColor(R.styleable.ucul_text_and_text_view_division_bg,  getResources().getColor(R.color.ucu_colorFont_gray));            //分割线颜色
-        int divisionVisibility = array.getInteger(R.styleable.ucul_text_and_text_view_division_visibility, 0);                                                  //分割线显示
-        String contentText = array.getString(R.styleable.ucul_text_and_text_view_content_text);                                                                 //内容文本
-        float contentTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_text_view_content_text_size, 15);                                         //内容文本大小
-        int contentTextColor = array.getColor(R.styleable.ucul_text_and_text_view_content_text_color,  getResources().getColor(R.color.ucu_colorFont_black));   //内容文本颜色
-        Drawable contentTextBg = array.getDrawable(R.styleable.ucul_text_and_text_view_content_text_bg);                                                        //内容文本背景
+        String titleText = array.getString(R.styleable.ucul_text_and_text_view_tat_title_text);                                                                     //标题文本
+        float titleTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_text_view_tat_title_text_size, 15);                                             //标题文本大小
+        int titleTextColor = array.getColor(R.styleable.ucul_text_and_text_view_tat_title_text_color,  getResources().getColor(R.color.ucu_colorFont_black));       //标题文本颜色
+        Drawable titleTextBg = array.getDrawable(R.styleable.ucul_text_and_text_view_tat_title_text_bg);                                                            //标题文本背景
+        int titleTextWidth = array.getInteger(R.styleable.ucul_text_and_text_view_tat_title_text_width, 300);                                                       //标题文本宽度
+        int divisionBgColor = array.getColor(R.styleable.ucul_text_and_text_view_tat_division_bg,  getResources().getColor(R.color.ucu_colorFont_gray));            //分割线颜色
+        int divisionVisibility = array.getInteger(R.styleable.ucul_text_and_text_view_tat_division_visibility, 0);                                                  //分割线显示
+        String contentText = array.getString(R.styleable.ucul_text_and_text_view_tat_content_text);                                                                 //内容文本
+        float contentTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_text_view_tat_content_text_size, 15);                                         //内容文本大小
+        int contentTextColor = array.getColor(R.styleable.ucul_text_and_text_view_tat_content_text_color,  getResources().getColor(R.color.ucu_colorFont_black));   //内容文本颜色
+        Drawable contentTextBg = array.getDrawable(R.styleable.ucul_text_and_text_view_tat_content_text_bg);                                                        //内容文本背景
 
         txt_title.setText(titleText);
         txt_title.getPaint().setTextSize(titleTextSize);
@@ -230,5 +240,27 @@ public class UCULTextAndTextView extends LinearLayout
         {
             txt_content.setBackground(getResources().getDrawable(res));
         }
+    }
+
+    /**
+     * 获取内容文本内容
+     * @return
+     */
+    public String getContentText()
+    {
+        return txt_content.getText().toString();
+    }
+
+    /**
+     * 内容文本点击事件接口
+     */
+    public interface onContentTextClick
+    {
+        void contentTextClick();
+    }
+
+    public void setOnViewClick(onContentTextClick click)
+    {
+        this.mClick = click;
     }
 }

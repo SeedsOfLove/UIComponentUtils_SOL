@@ -31,18 +31,42 @@
         android:text="文本框配文本框控件"/>
 
     <com.example.uicomponentutilslib.custom_widget.UCULTextAndTextView
+        android:id="@+id/tatv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title_text="标题"
-        app:title_text_size="15sp"
-        app:title_text_color="@color/colorPrimary"
-        app:title_text_bg="@drawable/ucul_round_corner_bg_orange"
-        app:title_text_width="400"
-        app:division_bg="@color/colorPrimary"
-        app:division_visibility="visible"
-        app:content_text="内容内容内容内容内容fsdfsd内容内容"
-        app:content_text_size="15sp"
-        app:content_text_color="@color/colorPrimary"
-        app:content_text_bg="@drawable/ucul_round_corner_bg_orange"/>
+        app:tat_title_text="标题"
+        app:tat_title_text_size="15sp"
+        app:tat_title_text_color="@color/colorPrimary"
+        app:tat_title_text_bg="@drawable/ucul_round_corner_bg_orange"
+        app:tat_title_text_width="400"
+        app:tat_division_bg="@color/colorPrimary"
+        app:tat_division_visibility="visible"
+        app:tat_content_text="内容内容内容内容内容fsdfsd内容内容"
+        app:tat_content_text_size="15sp"
+        app:tat_content_text_color="@color/colorPrimary"
+        app:tat_content_text_bg="@drawable/ucul_round_corner_bg_orange"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="文本框配编辑框控件"/>
+
+    <com.example.uicomponentutilslib.custom_widget.UCULTextAndEditView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tae_title_text="标题"
+        app:tae_title_text_size="15sp"
+        app:tae_title_text_color="@color/colorPrimary"
+        app:tae_title_text_bg="@drawable/ucul_round_corner_bg_orange"
+        app:tae_title_text_width="400"
+        app:tae_division_bg="@color/colorPrimary"
+        app:tae_division_visibility="visible"
+        app:tae_content_edit_hint_text="请输入"
+        app:tae_content_edit_text="XXX"
+        app:tae_content_edit_text_size="15sp"
+        app:tae_content_edit_text_color="@color/colorPrimary"
+        app:tae_content_edit_text_bg="@drawable/ucul_round_corner_bg_orange"/>
 
 </LinearLayout>
