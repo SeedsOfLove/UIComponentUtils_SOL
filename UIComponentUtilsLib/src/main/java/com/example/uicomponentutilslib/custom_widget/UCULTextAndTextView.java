@@ -2,6 +2,7 @@ package com.example.uicomponentutilslib.custom_widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -67,16 +68,19 @@ public class UCULTextAndTextView extends LinearLayout
         String titleText = array.getString(R.styleable.ucul_text_and_text_view_title_text);                                                                     //标题文本
         float titleTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_text_view_title_text_size, 15);                                             //标题文本大小
         int titleTextColor = array.getColor(R.styleable.ucul_text_and_text_view_title_text_color,  getResources().getColor(R.color.ucu_colorFont_black));       //标题文本颜色
+        Drawable titleTextBg = array.getDrawable(R.styleable.ucul_text_and_text_view_title_text_bg);                                                            //标题文本背景
         int titleTextWidth = array.getInteger(R.styleable.ucul_text_and_text_view_title_text_width, 300);                                                       //标题文本宽度
         int divisionBgColor = array.getColor(R.styleable.ucul_text_and_text_view_division_bg,  getResources().getColor(R.color.ucu_colorFont_gray));            //分割线颜色
         int divisionVisibility = array.getInteger(R.styleable.ucul_text_and_text_view_division_visibility, 0);                                                  //分割线显示
         String contentText = array.getString(R.styleable.ucul_text_and_text_view_content_text);                                                                 //内容文本
         float contentTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_text_view_content_text_size, 15);                                         //内容文本大小
         int contentTextColor = array.getColor(R.styleable.ucul_text_and_text_view_content_text_color,  getResources().getColor(R.color.ucu_colorFont_black));   //内容文本颜色
+        Drawable contentTextBg = array.getDrawable(R.styleable.ucul_text_and_text_view_content_text_bg);                                                        //内容文本背景
 
         txt_title.setText(titleText);
         txt_title.getPaint().setTextSize(titleTextSize);
         txt_title.setTextColor(titleTextColor);
+        txt_title.setBackground(titleTextBg);
 
         LinearLayout.LayoutParams linearParams = (LinearLayout.LayoutParams) txt_title.getLayoutParams();
         linearParams.width = titleTextWidth;
@@ -88,6 +92,7 @@ public class UCULTextAndTextView extends LinearLayout
         txt_content.setText(contentText);
         txt_content.getPaint().setTextSize(contentTextSize);
         txt_content.setTextColor(contentTextColor);
+        txt_content.setBackground(contentTextBg);
 
         array.recycle();
     }
@@ -125,6 +130,18 @@ public class UCULTextAndTextView extends LinearLayout
         if (txt_title != null)
         {
             txt_title.setTextColor(getResources().getColor(color));
+        }
+    }
+
+    /**
+     * 设置标题文本背景
+     * @param res
+     */
+    public void setTitleTextBackground(int res)
+    {
+        if (txt_title != null)
+        {
+            txt_title.setBackground(getResources().getDrawable(res));
         }
     }
 
@@ -200,6 +217,18 @@ public class UCULTextAndTextView extends LinearLayout
         if (txt_content != null)
         {
             txt_content.setTextColor(getResources().getColor(color));
+        }
+    }
+
+    /**
+     * 设置内容文本背景
+     * @param res
+     */
+    public void setContentTextBackground(int res)
+    {
+        if (txt_content != null)
+        {
+            txt_content.setBackground(getResources().getDrawable(res));
         }
     }
 }

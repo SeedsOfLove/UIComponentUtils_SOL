@@ -22,11 +22,13 @@
         app:title_text="标题"
         app:title_text_size="15sp"
         app:title_text_color="@color/colorPrimary"
-        app:title_text_width="200"
+        app:title_text_bg="@drawable/ucul_round_corner_bg_orange"
+        app:title_text_width="400"
         app:division_bg="@color/colorPrimary"
         app:division_visibility="visible"
         app:content_text="内容内容内容内容内容fsdfsd内容内容"
         app:content_text_size="15sp"
-        app:content_text_color="@color/colorPrimary" />
+        app:content_text_color="@color/colorPrimary"
+        app:content_text_bg="@drawable/ucul_round_corner_bg_orange"/>
 
 </LinearLayout>
