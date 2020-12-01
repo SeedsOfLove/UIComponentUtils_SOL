@@ -53,7 +53,8 @@ public class UCULEditAndBtnView extends LinearLayout
             @Override
             public void onClick(View v)
             {
-                mClick.ibtnClick();
+                if (mClick != null)
+                    mClick.ibtnClick();
             }
         });
     }

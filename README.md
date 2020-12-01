@@ -20,7 +20,7 @@ allprojects {
 ### Step 2. Add the dependency
 ```
 dependencies {
-        implementation 'com.github.SeedsOfLove:UIComponentUtils_SOL:1.0.1'
+        implementation 'com.github.SeedsOfLove:UIComponentUtils_SOL:1.0.2'
 	}
 ```
 

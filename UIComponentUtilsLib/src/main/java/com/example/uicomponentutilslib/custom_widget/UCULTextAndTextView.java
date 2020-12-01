@@ -53,7 +53,8 @@ public class UCULTextAndTextView extends LinearLayout
             @Override
             public void onClick(View view)
             {
-                mClick.contentTextClick();
+                if (mClick != null)
+                    mClick.contentTextClick();
             }
         });
     }
