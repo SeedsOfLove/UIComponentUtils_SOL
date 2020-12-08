@@ -20,7 +20,7 @@
         app:hint_text="请输入数据"
         app:text_size="15sp"
         app:text_color="@color/colorPrimary"
-        app:edit_bg="@drawable/ucul_round_corner_bg_orange"
+        app:edit_bg="@drawable/ucul_round_corner_bg_blue"
         app:btn_icon="@mipmap/search"/>
 
     <TextView
@@ -67,6 +67,6 @@
         app:tae_content_edit_text="XXX"
         app:tae_content_edit_text_size="15sp"
         app:tae_content_edit_text_color="@color/colorPrimary"
-        app:tae_content_edit_text_bg="@drawable/ucul_round_corner_bg_orange"/>
+        app:tae_content_edit_text_bg="@drawable/ucul_round_corner_bg_blue"/>
 
 </LinearLayout>
