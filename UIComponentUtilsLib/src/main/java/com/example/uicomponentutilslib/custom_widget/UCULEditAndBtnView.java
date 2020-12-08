@@ -75,12 +75,11 @@ public class UCULEditAndBtnView extends LinearLayout
     {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ucul_edit_and_btn_view, defStyleAttr, 0);
 
-
         String hintText = array.getString(R.styleable.ucul_edit_and_btn_view_hint_text);                                                                //提示文本
         float editTextSize = array.getDimensionPixelSize(R.styleable.ucul_edit_and_btn_view_text_size, 15);                                             //编辑框文本大小
-        int editTextColor = array.getColor(R.styleable.ucul_edit_and_btn_view_text_color,  getResources().getColor(R.color.ucu_colorFont_black));       //编辑框文本颜色
+        int editTextColor = array.getColor(R.styleable.ucul_edit_and_btn_view_text_color, getResources().getColor(R.color.ucu_colorFont_black));       //编辑框文本颜色
         Drawable editBg = array.getDrawable(R.styleable.ucul_edit_and_btn_view_edit_bg);                                                                //编辑框背景
-        int btnImage = array.getResourceId(R.styleable.ucul_edit_and_btn_view_btn_icon,  0);                                                            //按钮图标
+        int btnImage = array.getResourceId(R.styleable.ucul_edit_and_btn_view_btn_icon, 0);                                                            //按钮图标
 
         editText.setHint(hintText);
         editText.getPaint().setTextSize(editTextSize);
@@ -93,11 +92,12 @@ public class UCULEditAndBtnView extends LinearLayout
 
     /**
      * 设置输入框的提示文本
+     *
      * @param textHint
      */
     public void setTextHint(String textHint)
     {
-        if (!TextUtils.isEmpty(textHint))
+        if (textHint != null)
         {
             editText.setHint(textHint);
         }
@@ -105,54 +105,47 @@ public class UCULEditAndBtnView extends LinearLayout
 
     /**
      * 设置编辑框文本大小
+     *
      * @param size
      */
     public void setEditTextSize(int size)
     {
-        if (editText != null)
-        {
-            editText.setTextSize(TypedValue.COMPLEX_UNIT_SP, size);
-        }
+        editText.setTextSize(TypedValue.COMPLEX_UNIT_SP, size);
     }
 
     /**
      * 设置编辑框文本颜色
+     *
      * @param color
      */
     public void setEditTextColor(int color)
     {
-        if (editText != null)
-        {
-            editText.setTextColor(getResources().getColor(color));
-        }
+        editText.setTextColor(getResources().getColor(color));
     }
 
     /**
      * 设置编辑框背景
+     *
      * @param res
      */
     public void setEditTextBackground(int res)
     {
-        if (editText != null)
-        {
-            editText.setBackground(getResources().getDrawable(res));
-        }
+        editText.setBackground(getResources().getDrawable(res));
     }
 
     /**
      * 设置按钮图标
+     *
      * @param res
      */
     public void setDrawable(int res)
     {
-        if (ibtn != null)
-        {
-            ibtn.setImageResource(res);
-        }
+        ibtn.setImageResource(res);
     }
 
     /**
      * 设置文本内容
+     *
      * @return
      */
     public void setEditText(String content)
@@ -162,6 +155,7 @@ public class UCULEditAndBtnView extends LinearLayout
 
     /**
      * 获取文本内容
+     *
      * @return
      */
     public String getEditText()
