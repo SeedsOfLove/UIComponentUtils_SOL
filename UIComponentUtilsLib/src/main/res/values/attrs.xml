@@ -2,11 +2,12 @@
 <resources>
 
     <declare-styleable name="ucul_edit_and_btn_view">
-        <attr name="hint_text" format="string"/>
-        <attr name="text_size" format="dimension"/>
-        <attr name="text_color" format="color"/>
-        <attr name="edit_bg" format="reference"/>
-        <attr name="btn_icon" format="reference"/>
+        <attr name="eab_hint_text" format="string"/>
+        <attr name="eab_hint_color" format="color"/>
+        <attr name="eab_text_size" format="dimension"/>
+        <attr name="eab_text_color" format="color"/>
+        <attr name="eab_edit_bg" format="reference"/>
+        <attr name="eab_btn_icon" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="ucul_text_and_text_view">
@@ -40,6 +41,7 @@
             <enum name="gone" value="8" />
         </attr>
         <attr name="tae_content_edit_hint_text" format="string"/>
+        <attr name="tae_content_edit_hint_text_color" format="color"/>
         <attr name="tae_content_edit_text" format="string"/>
         <attr name="tae_content_edit_text_size" format="dimension"/>
         <attr name="tae_content_edit_text_color" format="color"/>

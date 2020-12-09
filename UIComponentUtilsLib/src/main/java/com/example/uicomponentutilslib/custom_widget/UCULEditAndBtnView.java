@@ -75,13 +75,15 @@ public class UCULEditAndBtnView extends LinearLayout
     {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ucul_edit_and_btn_view, defStyleAttr, 0);
 
-        String hintText = array.getString(R.styleable.ucul_edit_and_btn_view_hint_text);                                                                //提示文本
-        float editTextSize = array.getDimensionPixelSize(R.styleable.ucul_edit_and_btn_view_text_size, 15);                                             //编辑框文本大小
-        int editTextColor = array.getColor(R.styleable.ucul_edit_and_btn_view_text_color, getResources().getColor(R.color.ucu_colorFont_black));       //编辑框文本颜色
-        Drawable editBg = array.getDrawable(R.styleable.ucul_edit_and_btn_view_edit_bg);                                                                //编辑框背景
-        int btnImage = array.getResourceId(R.styleable.ucul_edit_and_btn_view_btn_icon, 0);                                                            //按钮图标
+        String hintText = array.getString(R.styleable.ucul_edit_and_btn_view_eab_hint_text);                                                                //提示文本
+        int editTextHintColor = array.getColor(R.styleable.ucul_edit_and_btn_view_eab_hint_color, getResources().getColor(R.color.ucu_colorFont_gray));     //编辑框文本颜色
+        float editTextSize = array.getDimensionPixelSize(R.styleable.ucul_edit_and_btn_view_eab_text_size, 15);                                             //编辑框文本大小
+        int editTextColor = array.getColor(R.styleable.ucul_edit_and_btn_view_eab_text_color, getResources().getColor(R.color.ucu_colorFont_black));        //编辑框文本颜色
+        Drawable editBg = array.getDrawable(R.styleable.ucul_edit_and_btn_view_eab_edit_bg);                                                                //编辑框背景
+        int btnImage = array.getResourceId(R.styleable.ucul_edit_and_btn_view_eab_btn_icon, 0);                                                             //按钮图标
 
         editText.setHint(hintText);
+        editText.setHintTextColor(editTextHintColor);
         editText.getPaint().setTextSize(editTextSize);
         editText.setTextColor(editTextColor);
         editText.setBackground(editBg);
@@ -101,6 +103,16 @@ public class UCULEditAndBtnView extends LinearLayout
         {
             editText.setHint(textHint);
         }
+    }
+
+    /**
+     * 设置编辑框提示文本颜色
+     *
+     * @param color
+     */
+    public void setEditTextHintColor(int color)
+    {
+        editText.setHintTextColor(getResources().getColor(color));
     }
 
     /**

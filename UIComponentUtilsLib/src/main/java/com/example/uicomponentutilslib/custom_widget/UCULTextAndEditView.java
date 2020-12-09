@@ -67,16 +67,17 @@ public class UCULTextAndEditView extends LinearLayout
 
         String titleText = array.getString(R.styleable.ucul_text_and_edit_view_tae_title_text);                                                                             //标题文本
         float titleTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_edit_view_tae_title_text_size, 15);                                                     //标题文本大小
-        int titleTextColor = array.getColor(R.styleable.ucul_text_and_edit_view_tae_title_text_color, getResources().getColor(R.color.ucu_colorFont_black));               //标题文本颜色
+        int titleTextColor = array.getColor(R.styleable.ucul_text_and_edit_view_tae_title_text_color, getResources().getColor(R.color.ucu_colorFont_black));                //标题文本颜色
         Drawable titleTextBg = array.getDrawable(R.styleable.ucul_text_and_edit_view_tae_title_text_bg);                                                                    //标题文本背景
         int titleTextWidth = array.getInteger(R.styleable.ucul_text_and_edit_view_tae_title_text_width, 300);                                                               //标题文本宽度
-        int divisionBgColor = array.getColor(R.styleable.ucul_text_and_edit_view_tae_division_bg, getResources().getColor(R.color.ucu_colorFont_gray));                    //分割线颜色
-        int divisionVisibility = array.getInteger(R.styleable.ucul_text_and_edit_view_tae_division_visibility, 0);                                                          //分割线显示
-        String contentEditHintText = array.getString(R.styleable.ucul_text_and_edit_view_tae_content_edit_hint_text);                                                       //内容编辑框提示文本
-        String contentEditText = array.getString(R.styleable.ucul_text_and_edit_view_tae_content_edit_text);                                                                //内容编辑框文本
-        float contentEditTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_edit_view_tae_content_edit_text_size, 15);                                        //内容编辑框文本大小
-        int contentEditTextColor = array.getColor(R.styleable.ucul_text_and_edit_view_tae_content_edit_text_color, getResources().getColor(R.color.ucu_colorFont_black));  //内容编辑框文本颜色
-        Drawable contentEditTextBg = array.getDrawable(R.styleable.ucul_text_and_edit_view_tae_content_edit_text_bg);                                                       //内容编辑框文本背景
+        int divisionBgColor = array.getColor(R.styleable.ucul_text_and_edit_view_tae_division_bg, getResources().getColor(R.color.ucu_colorFont_gray));                 //分割线颜色
+        int divisionVisibility = array.getInteger(R.styleable.ucul_text_and_edit_view_tae_division_visibility, 0);                                                      //分割线显示
+        String contentEditHintText = array.getString(R.styleable.ucul_text_and_edit_view_tae_content_edit_hint_text);                                                               //内容编辑框提示文本
+        int contentEditHintTextColor = array.getColor(R.styleable.ucul_text_and_edit_view_tae_content_edit_hint_text_color, getResources().getColor(R.color.ucu_colorFont_gray));   //内容编辑框提示文本颜色
+        String contentEditText = array.getString(R.styleable.ucul_text_and_edit_view_tae_content_edit_text);                                                                        //内容编辑框文本
+        float contentEditTextSize = array.getDimensionPixelSize(R.styleable.ucul_text_and_edit_view_tae_content_edit_text_size, 15);                                                //内容编辑框文本大小
+        int contentEditTextColor = array.getColor(R.styleable.ucul_text_and_edit_view_tae_content_edit_text_color, getResources().getColor(R.color.ucu_colorFont_black));           //内容编辑框文本颜色
+        Drawable contentEditTextBg = array.getDrawable(R.styleable.ucul_text_and_edit_view_tae_content_edit_text_bg);                                                               //内容编辑框文本背景
 
         txt_title.setText(titleText);
         txt_title.getPaint().setTextSize(titleTextSize);
@@ -91,6 +92,7 @@ public class UCULTextAndEditView extends LinearLayout
         txt_division.setVisibility(divisionVisibility);
 
         et_content.setHint(contentEditHintText);
+        et_content.setHintTextColor(contentEditHintTextColor);
         et_content.setText(contentEditText);
         et_content.getPaint().setTextSize(contentEditTextSize);
         et_content.setTextColor(contentEditTextColor);
@@ -189,6 +191,16 @@ public class UCULTextAndEditView extends LinearLayout
     }
 
     /**
+     * 设置标题提示文本颜色
+     *
+     * @param color
+     */
+    public void setTitleHintTextColor(int color)
+    {
+        et_content.setHintTextColor(getResources().getColor(color));
+    }
+
+    /**
      * 设置内容编辑文本
      *
      * @param contentText
@@ -239,5 +251,10 @@ public class UCULTextAndEditView extends LinearLayout
     public String getContentEditText()
     {
         return et_content.getText().toString();
+    }
+
+    public EditText getEditTextView()
+    {
+        return et_content;
     }
 }
