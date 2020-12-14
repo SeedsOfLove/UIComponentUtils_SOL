@@ -48,5 +48,19 @@
         <attr name="tae_content_edit_text_bg" format="reference"/>
     </declare-styleable>
 
+    <declare-styleable name="ucul_title_bar_view">
+        <attr name="tbv_left_icon" format="reference"/>
+        <attr name="tbv_right_icon" format="reference"/>
+        <attr name="tbv_left_text" format="string"/>
+        <attr name="tbv_title_text" format="string"/>
+        <attr name="tbv_right_text" format="string"/>
+        <attr name="tbv_left_text_color" format="color"/>
+        <attr name="tbv_title_text_color" format="color"/>
+        <attr name="tbv_right_text_color" format="color"/>
+        <attr name="tbv_left_text_size" format="dimension"/>
+        <attr name="tbv_title_text_size" format="dimension"/>
+        <attr name="tbv_right_text_size" format="dimension"/>
+    </declare-styleable>
+
 
 </resources>

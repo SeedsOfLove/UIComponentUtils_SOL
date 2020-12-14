@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bluewaterlib.toastutilslib.ToastUtils;
 import com.example.uicomponentutilslib.custom_widget.UCULEditAndBtnView;
 import com.example.uicomponentutilslib.custom_widget.UCULTextAndTextView;
+import com.example.uicomponentutilslib.custom_widget.UCULTitleBarView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity
 
     @BindView(R.id.tatv)
     UCULTextAndTextView tatv;    //文本框配文本框控件
+
+    @BindView(R.id.tbv)
+    UCULTitleBarView tbv;       //标题栏控件
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -51,6 +55,20 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        tbv.setOnViewClick(new UCULTitleBarView.onViewClick()
+        {
+            @Override
+            public void leftClick()
+            {
+                ToastUtils.onSuccessShowToast("左");
+            }
+
+            @Override
+            public void rightClick()
+            {
+                ToastUtils.onWarnShowToast("右");
+            }
+        });
     }
 
 }

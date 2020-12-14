@@ -182,7 +182,7 @@ public class UCULTextAndEditView extends LinearLayout
      *
      * @param textHint
      */
-    public void setContentEditTextHint(String textHint)
+    public void setContentEditHintText(String textHint)
     {
         if (textHint != null)
         {
@@ -195,7 +195,7 @@ public class UCULTextAndEditView extends LinearLayout
      *
      * @param color
      */
-    public void setTitleHintTextColor(int color)
+    public void setContentEditHintTextColor(int color)
     {
         et_content.setHintTextColor(getResources().getColor(color));
     }

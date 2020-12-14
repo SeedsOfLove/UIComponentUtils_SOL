@@ -97,7 +97,7 @@ public class UCULEditAndBtnView extends LinearLayout
      *
      * @param textHint
      */
-    public void setTextHint(String textHint)
+    public void setEditTextHint(String textHint)
     {
         if (textHint != null)
         {

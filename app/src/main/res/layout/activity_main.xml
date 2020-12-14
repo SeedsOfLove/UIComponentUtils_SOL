@@ -17,11 +17,11 @@
         android:id="@+id/eabv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:hint_text="请输入数据"
-        app:text_size="15sp"
-        app:text_color="@color/colorPrimary"
-        app:edit_bg="@drawable/ucul_round_corner_bg_blue"
-        app:btn_icon="@mipmap/search"/>
+        app:eab_hint_text="请输入数据"
+        app:eab_text_size="15sp"
+        app:eab_text_color="@color/colorPrimary"
+        app:eab_edit_bg="@drawable/ucul_round_corner_bg_blue"
+        app:eab_btn_icon="@mipmap/ucul_search"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -68,5 +68,29 @@
         app:tae_content_edit_text_size="15sp"
         app:tae_content_edit_text_color="@color/colorPrimary"
         app:tae_content_edit_text_bg="@drawable/ucul_round_corner_bg_blue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="标题栏控件"/>
+
+    <com.example.uicomponentutilslib.custom_widget.UCULTitleBarView
+        android:id="@+id/tbv"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        app:tbv_left_icon="@mipmap/ucul_search"
+        app:tbv_right_icon="@mipmap/ucul_search"
+        app:tbv_left_text="返回"
+        app:tbv_title_text="我是标题"
+        app:tbv_right_text="进入"
+        app:tbv_left_text_color="@color/colorPrimary"
+        app:tbv_title_text_color="@color/colorPrimary"
+        app:tbv_right_text_color="@color/colorPrimary"
+        app:tbv_left_text_size="15sp"
+        app:tbv_title_text_size="20sp"
+        app:tbv_right_text_size="15sp"/>
 
 </LinearLayout>
