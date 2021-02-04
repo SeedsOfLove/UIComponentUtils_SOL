@@ -62,5 +62,35 @@
         <attr name="tbv_right_text_size" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="ucul_image_and_text_view">
+        <attr name="iat_icon" format="reference"/>
+        <attr name="iat_content_text" format="string"/>
+        <attr name="iat_content_text_size" format="dimension"/>
+        <attr name="iat_content_text_color" format="color"/>
+        <attr name="iat_content_text_bg" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ucul_spinner_view">
+        <attr name="sv_arrow_icon" format="reference"/>
+        <attr name="sv_bg" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ucul_flow_layout">
+        <attr name="ucul_fl_horizontalSpacing" format="dimension"/>
+        <attr name="ucul_fl_verticalSpacing" format="dimension"/>
+        <attr name="ucul_fl_itemSize" format="dimension"/>
+        <attr name="ucul_fl_itemColor" format="color"/>
+        <attr name="ucul_fl_backgroundResource" format="reference"/>
+        <attr name="ucul_fl_textPaddingH" format="dimension"/>
+        <attr name="ucul_fl_textPaddingV" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ucul_ripple_view">
+        <attr name="ucul_rv_color" format="color"/>
+        <attr name="ucul_rv_speed" format="integer"/>
+        <attr name="ucul_rv_density" format="integer"/>
+        <attr name="ucul_rv_isFill" format="boolean"/>
+        <attr name="ucul_rv_IsAlpha" format="boolean"/>
+    </declare-styleable>
 
 </resources>

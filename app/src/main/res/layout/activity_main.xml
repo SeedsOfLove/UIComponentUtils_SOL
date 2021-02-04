@@ -1,96 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textSize="15sp"
-        android:text="编辑框配按钮控件"/>
-
-    <com.example.uicomponentutilslib.custom_widget.UCULEditAndBtnView
-        android:id="@+id/eabv"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:eab_hint_text="请输入数据"
-        app:eab_text_size="15sp"
-        app:eab_text_color="@color/colorPrimary"
-        app:eab_edit_bg="@drawable/ucul_round_corner_bg_blue"
-        app:eab_btn_icon="@mipmap/ucul_search"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textSize="15sp"
-        android:text="文本框配文本框控件"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="编辑框配按钮控件"/>
 
-    <com.example.uicomponentutilslib.custom_widget.UCULTextAndTextView
-        android:id="@+id/tatv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tat_title_text="标题"
-        app:tat_title_text_size="15sp"
-        app:tat_title_text_color="@color/colorPrimary"
-        app:tat_title_text_bg="@drawable/ucul_round_corner_bg_orange"
-        app:tat_title_text_width="400"
-        app:tat_division_bg="@color/colorPrimary"
-        app:tat_division_visibility="visible"
-        app:tat_content_text="内容内容内容内容内容fsdfsd内容内容"
-        app:tat_content_text_size="15sp"
-        app:tat_content_text_color="@color/colorPrimary"
-        app:tat_content_text_bg="@drawable/ucul_round_corner_bg_orange"/>
+        <com.example.uicomponentutilslib.custom_widget.UCULEditAndBtnView
+            android:id="@+id/eabv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:eab_hint_text="请输入数据"
+            app:eab_text_size="15sp"
+            app:eab_text_color="@color/colorPrimary"
+            app:eab_edit_bg="@drawable/ucul_round_corner_bg_blue"
+            app:eab_btn_icon="@mipmap/ucul_search"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textSize="15sp"
-        android:text="文本框配编辑框控件"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="文本框配文本框控件"/>
 
-    <com.example.uicomponentutilslib.custom_widget.UCULTextAndEditView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tae_title_text="标题"
-        app:tae_title_text_size="15sp"
-        app:tae_title_text_color="@color/colorPrimary"
-        app:tae_title_text_bg="@drawable/ucul_round_corner_bg_orange"
-        app:tae_title_text_width="400"
-        app:tae_division_bg="@color/colorPrimary"
-        app:tae_division_visibility="visible"
-        app:tae_content_edit_hint_text="请输入"
-        app:tae_content_edit_text="XXX"
-        app:tae_content_edit_text_size="15sp"
-        app:tae_content_edit_text_color="@color/colorPrimary"
-        app:tae_content_edit_text_bg="@drawable/ucul_round_corner_bg_blue"/>
+        <com.example.uicomponentutilslib.custom_widget.UCULTextAndTextView
+            android:id="@+id/tatv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tat_title_text="标题"
+            app:tat_title_text_size="15sp"
+            app:tat_title_text_color="@color/colorPrimary"
+            app:tat_title_text_bg="@drawable/ucul_round_corner_bg_orange"
+            app:tat_title_text_width="400"
+            app:tat_division_bg="@color/colorPrimary"
+            app:tat_division_visibility="visible"
+            app:tat_content_text="内容内容内容内容内容fsdfsd内容内容"
+            app:tat_content_text_size="15sp"
+            app:tat_content_text_color="@color/colorPrimary"
+            app:tat_content_text_bg="@drawable/ucul_round_corner_bg_orange"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textSize="15sp"
-        android:text="标题栏控件"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="文本框配编辑框控件"/>
 
-    <com.example.uicomponentutilslib.custom_widget.UCULTitleBarView
-        android:id="@+id/tbv"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorAccent"
-        app:tbv_left_icon="@mipmap/ucul_search"
-        app:tbv_right_icon="@mipmap/ucul_search"
-        app:tbv_left_text="返回"
-        app:tbv_title_text="我是标题"
-        app:tbv_right_text="进入"
-        app:tbv_left_text_color="@color/colorPrimary"
-        app:tbv_title_text_color="@color/colorPrimary"
-        app:tbv_right_text_color="@color/colorPrimary"
-        app:tbv_left_text_size="15sp"
-        app:tbv_title_text_size="20sp"
-        app:tbv_right_text_size="15sp"/>
+        <com.example.uicomponentutilslib.custom_widget.UCULTextAndEditView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tae_title_text="标题"
+            app:tae_title_text_size="15sp"
+            app:tae_title_text_color="@color/colorPrimary"
+            app:tae_title_text_bg="@drawable/ucul_round_corner_bg_orange"
+            app:tae_title_text_width="400"
+            app:tae_division_bg="@color/colorPrimary"
+            app:tae_division_visibility="visible"
+            app:tae_content_edit_hint_text="请输入"
+            app:tae_content_edit_text="XXX"
+            app:tae_content_edit_text_size="15sp"
+            app:tae_content_edit_text_color="@color/colorPrimary"
+            app:tae_content_edit_text_bg="@drawable/ucul_round_corner_bg_blue"/>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="标题栏控件"/>
+
+        <com.example.uicomponentutilslib.custom_widget.UCULTitleBarView
+            android:id="@+id/tbv"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:tbv_left_icon="@mipmap/ucul_search"
+            app:tbv_right_icon="@mipmap/ucul_search"
+            app:tbv_left_text="返回"
+            app:tbv_title_text="我是标题"
+            app:tbv_right_text="进入"
+            app:tbv_left_text_color="@color/colorPrimary"
+            app:tbv_title_text_color="@color/colorPrimary"
+            app:tbv_right_text_color="@color/colorPrimary"
+            app:tbv_left_text_size="15sp"
+            app:tbv_title_text_size="20sp"
+            app:tbv_right_text_size="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="图片配文本框控件"/>
+
+        <com.example.uicomponentutilslib.custom_widget.UCULImageAndTextView
+            android:id="@+id/iat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iat_icon="@mipmap/ucul_search"
+            app:iat_content_text="内容内容内容内容内容fsdfsd内容内容"
+            app:iat_content_text_size="15sp"
+            app:iat_content_text_color="@color/ucu_colorFont_black"
+            app:iat_content_text_bg="@color/ucu_white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="下拉框"/>
+
+        <com.example.uicomponentutilslib.custom_widget.spinner.UCULSpinnerView
+            android:id="@+id/spinner_view"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:sv_arrow_icon="@mipmap/ucul_arrow_down_red"
+            app:sv_bg="@drawable/ucul_round_corner_bg_orange"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="搜索栏（模糊查询、搜索历史）"/>
+
+        <com.example.uicomponentutilslib.custom_widget.search_bar.UCULSearchBarView
+            android:id="@+id/sbv"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="长按弹出仿QQ菜单"/>
+
+        <TextView
+            android:id="@+id/tv_long_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="长按我"
+            android:textSize="15sp"
+            android:background="@drawable/ucul_round_corner_bg_orange"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:text="圆形涟漪效果"/>
+
+        <com.example.uicomponentutilslib.custom_widget.UCULRippleView
+            android:id="@+id/rv_uwb_find_tag_ripple"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:ucul_rv_color="@color/ucu_orange"
+            app:ucul_rv_speed="3"
+            app:ucul_rv_density="15"
+            app:ucul_rv_IsAlpha="true"
+            app:ucul_rv_isFill="true"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
