@@ -22,6 +22,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity
             public boolean onLongClick(View view)
             {
                 //获得控件在屏幕中的绝对坐标
-                int[] location = new  int[2] ;
+                int[] location = new int[2];
                 tvLongMenu.getLocationInWindow(location); //获取在当前窗口内的绝对坐标
                 tvLongMenu.getLocationOnScreen(location);//获取在整个屏幕内的绝对坐标
 
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity
                             @Override
                             public void onPopupListItemClick(View anchorView, int anchorViewPosition, int position)
                             {
-                                switch(position)
+                                switch (position)
                                 {
                                     case 0:
                                         ToastUtils.onInfoShowToast("菜单1");
@@ -180,5 +181,12 @@ public class MainActivity extends AppCompatActivity
 
             }
         }
+    }
+
+    @OnClick(R.id.btn_refresh)
+    public void onViewRefreshClicked()
+    {
+        Intent intent = new Intent(mContext, RefreshActivity.class);
+        startActivity(intent);
     }
 }
